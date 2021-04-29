@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://github.com/helm/helm/releases
-HostUrl=https://github-releases.githubusercontent.com/43723161/ededfa80-9d46-11eb-8e7c-5afa304b5e69?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210428%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210428T212247Z&X-Amz-Expires=300&X-Amz-Signature=03de41fb333d3843da15bb04e33ee3505302a99e374811253b98f8e79542c0ee&X-Amz-SignedHeaders=host&actor_id=43526064&key_id=0&repo_id=43723161&response-content-disposition=attachment%3B%20filename%3Dhelm-v3.5.4-darwin-amd64.tar.gz.asc&response-content-type=application%2Foctet-stream
