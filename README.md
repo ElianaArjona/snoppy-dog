@@ -8,3 +8,4 @@ export PATH=$PATH:/usr/local/go/bin
 https://helm.sh/docs/intro/quickstart/
 
 ### Link Flux reference docs
+https://github.com/fluxcd/flux/blob/master/docs/tutorials/get-started.md
