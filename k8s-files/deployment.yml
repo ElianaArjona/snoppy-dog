@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app-dply
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: go-app
+  template:
+    metadata:
+      labels:
+        name: go-app
+    spec:
+      containers:
+      - name: application
+        image: eliarjona95/go-command-demo
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: READ_PATH
+            valueFrom: 
+              configMapKeyRef:
+                name: go-configmap
+                key: read_path
+          - name: PARSER
+            valueFrom: 
+              configMapKeyRef:
+                name: go-configmap
+                key: parser
+        command: ["/app/main"]
+        args: ["-readpath=$(READ_PATH)", "-parser=$(PARSER)"]
