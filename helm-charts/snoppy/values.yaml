@@ -1,0 +1,17 @@
+# Default values for snoppy.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+namedply: go-app-dply
+
+replicaCount: 3
+namespace: test-demo
+
+container:
+  image: eliarjona95/go-command-demo
+  repository: application
+  pullPolicy: IfNotPresent
+
+nameconf: go-configmap
+data:
+  read_path: reading_path_file-map
+  parser: name_of_parser-map

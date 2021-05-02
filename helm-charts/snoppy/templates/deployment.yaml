@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.namedply}}
+spec:
+  replicas: {{.Values.replicaCount}}
+  selector:
+    matchLabels:
+      name: go-app
+  template:
+    metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+      labels:
+        name: go-app
+    spec:
+      containers:
+      - name: application
+        image: {{.Values.container.image}}
+        imagePullPolicy: {{.Values.container.pullPolicy}}
+        env:
+          - name: READ_PATH
+            valueFrom: 
+              configMapKeyRef:
+                name: go-configmap
+                key: read_path
+          - name: PARSER
+            valueFrom: 
+              configMapKeyRef:
+                name: go-configmap
+                key: parser
+        command: ["/app/main"]
+        args: ["-readpath=$(READ_PATH)", "-parser=$(PARSER)"]

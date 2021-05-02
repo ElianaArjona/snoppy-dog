@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Values.nameconf}}
+data:
+  read_path: {{.Values.data.read_path}}
+  parser: {{.Values.data.parser}}
