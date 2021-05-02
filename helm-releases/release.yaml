@@ -6,7 +6,7 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
 spec:
-  releaseName: fluxcd-demo
+  releaseName: snoppy
   targetNamespace: fluxcd-demo
   chart:
     git: git@github.com:ElianaArjona/snoppy-dog.git
