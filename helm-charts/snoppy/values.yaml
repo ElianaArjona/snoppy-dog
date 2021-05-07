@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 namedply: go-app-dply
 
-replicaCount: 4
+replicaCount: 2
 namespace: test-demo
 
 container:
