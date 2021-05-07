@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: go-configmap
-data:
-  read_path: reading_path_file-map2
-  parser: name_of_parser-map2
