@@ -11,4 +11,4 @@ spec:
   chart:
     git: git@github.com:ElianaArjona/snoppy-dog.git
     path: helm-charts/snoppy
-    ref: flux-helm
+    ref: helm-flux
